@@ -1,0 +1,9 @@
+{% extends 'exp_tracker/expenses_list.html' %}
+{% block content %}
+  <h2>Add Expense</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Expense</button>
+  </form>
+{% endblock %}
